@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:"PhoneSystem",component:HomeComponent },
   {path:"Create",component:AddNewContactComponent},
   {path:"Login",component:LoginComponent},
-  {path:'',redirectTo:'Home',pathMatch:"full"}
+  {path:'',redirectTo:'PhoneSystem',pathMatch:"full"}
 ];
 
 @NgModule({
