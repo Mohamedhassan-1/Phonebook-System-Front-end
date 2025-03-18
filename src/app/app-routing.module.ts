@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Navbar } from './navbar/navbar.component';
+import { HomeComponent } from './Home/Home.component';
 import { AddNewContactComponent } from './add-new-contact/add-new-contact.component';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './Login/Login.component';
 
 const routes: Routes = [
-  {path:"PhoneSystem",component:Navbar },
+  {path:"PhoneSystem",component:HomeComponent },
   {path:"Create",component:AddNewContactComponent},
-  {path:"Home",component:HomeComponent},
+  {path:"Login",component:LoginComponent},
   {path:'',redirectTo:'Home',pathMatch:"full"}
 ];
 

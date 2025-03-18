@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Navbar } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './Home/Home.component';
+import { LoginComponent } from './Login/Login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { AddNewContactComponent } from './add-new-contact/add-new-contact.component';
@@ -12,8 +12,8 @@ import { AddNewContactComponent } from './add-new-contact/add-new-contact.compon
 @NgModule({
   declarations: [
     AppComponent,
-    Navbar,
     HomeComponent,
+    LoginComponent,
     AddNewContactComponent
   ],
   imports: [
