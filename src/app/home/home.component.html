@@ -1,0 +1,16 @@
+<div id="mainButton" *ngIf="isVisible">
+	<div class="modal">
+		<div class="form-title">Sign In</div>
+		<div class="input-group">
+			<input type="text" id="name"  placeholder="E M A I L" [(ngModel)]="Email" />
+		</div>
+		<div class="input-group">
+			<input type="password" id="password"  
+            placeholder="Password" [(ngModel)]="password" 
+            />
+		</div>
+		<div class="form-button" routerLink="PhoneSystem" (click)="changeVisibilty()">Go</div>
+	</div>
+</div>
+
+<app-navbar [email]="Email" *ngIf="!isVisible"></app-navbar>

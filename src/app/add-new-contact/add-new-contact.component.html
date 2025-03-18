@@ -1,0 +1,21 @@
+<div id="mainButton" *ngIf="showComponent">
+	<div class="btn-text" >Add New Contact</div>
+        <form class="modal" [formGroup]="ContactForm" (ngSubmit)="addNewContact(ContactForm)">
+			<div class="close-button" (click)="changeVisibility()">x</div>
+		<div class="form-title">Add New Contact</div>
+		<div class="input-group">
+			<input type="text" id="name"  placeholder="Name" formControlName="name" />
+			<p style="color: red;" *ngIf="ContactForm.get('name')?.errors && ContactForm.get('name')?.touched && ContactForm.get('name')?.getError('required')">required</p>
+		</div>
+        <div class="input-group">
+			<input type="email" id="Email"  placeholder="Email" formControlName="email"/>
+			<p style="color: red;" *ngIf="ContactForm.get('email')?.errors && ContactForm.get('email')?.touched && ContactForm.get('email')?.getError('required')">required</p>
+		</div>
+        <div class="input-group">
+			<input type="tel" id="Phone Number"  placeholder="Phone Number"  formControlName="phoneNumber"/>
+			<p style="color: red;" *ngIf="ContactForm.get('phoneNumber')?.errors && ContactForm.get('phoneNumber')?.touched && ContactForm.get('phoneNumber')?.getError('phoneNumber')">required</p>
+		</div>
+		<button type="submit" routerLink="PhoneSystem"  [disabled]="ContactForm.invalid" class="form-button" >Create</button>
+    </form>
+	</div>
+<app-navbar *ngIf="!showComponent"></app-navbar>
